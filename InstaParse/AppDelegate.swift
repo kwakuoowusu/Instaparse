@@ -25,6 +25,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://floating-coast-65244.herokuapp.com/parse"
             })
         )
+        
+        if PFUser.currentUser() != nil {
+            // if there is a logged in user then load the home view controller
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
+            
+            window?.rootViewController = vc
+            
+        }
         return true
     }
 
