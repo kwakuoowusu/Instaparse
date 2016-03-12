@@ -10,12 +10,13 @@
 		8C3107041C8E628B003BBA68 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3107031C8E628B003BBA68 /* LoginViewController.swift */; };
 		8CA0C7E91C8E150200B66841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA0C7E81C8E150200B66841 /* AppDelegate.swift */; };
 		8CA0C7EE1C8E150200B66841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0C7EC1C8E150200B66841 /* Main.storyboard */; };
-		8CA0C7F01C8E150200B66841 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0C7EF1C8E150200B66841 /* Assets.xcassets */; };
 		8CA0C7F31C8E150200B66841 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0C7F11C8E150200B66841 /* LaunchScreen.storyboard */; };
+		8CC12C721C94A3B5008BCBE5 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC12C711C94A3B5008BCBE5 /* Media.xcassets */; };
 		8CCD67451C92166900CA08C9 /* InstaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD67441C92166900CA08C9 /* InstaViewController.swift */; };
 		8CCD67471C921D4200CA08C9 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD67461C921D4200CA08C9 /* CaptureViewController.swift */; };
 		8CCD67491C921D6500CA08C9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD67481C921D6500CA08C9 /* ProfileViewController.swift */; };
 		8CCD674B1C921DFA00CA08C9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD674A1C921DFA00CA08C9 /* Post.swift */; };
+		8CCD674D1C922F6100CA08C9 /* InstaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD674C1C922F6100CA08C9 /* InstaCell.swift */; };
 		B8093DB3B294845CAD5716E6 /* Pods_InstaParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B55EC1CEE5E70D98D90D29 /* Pods_InstaParse.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,13 +26,14 @@
 		8CA0C7E51C8E150200B66841 /* InstaParse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaParse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA0C7E81C8E150200B66841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CA0C7ED1C8E150200B66841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8CA0C7EF1C8E150200B66841 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CA0C7F21C8E150200B66841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CA0C7F41C8E150200B66841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CC12C711C94A3B5008BCBE5 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		8CCD67441C92166900CA08C9 /* InstaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaViewController.swift; sourceTree = "<group>"; };
 		8CCD67461C921D4200CA08C9 /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		8CCD67481C921D6500CA08C9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8CCD674A1C921DFA00CA08C9 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8CCD674C1C922F6100CA08C9 /* InstaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaCell.swift; sourceTree = "<group>"; };
 		A7B55EC1CEE5E70D98D90D29 /* Pods_InstaParse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaParse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA9856604EEFE7C8A8E2A51 /* Pods-InstaParse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaParse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaParse/Pods-InstaParse.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,9 +92,9 @@
 				8CCD67411C92162000CA08C9 /* View Controllers */,
 				8CA0C7E81C8E150200B66841 /* AppDelegate.swift */,
 				8CA0C7EC1C8E150200B66841 /* Main.storyboard */,
-				8CA0C7EF1C8E150200B66841 /* Assets.xcassets */,
 				8CA0C7F11C8E150200B66841 /* LaunchScreen.storyboard */,
 				8CA0C7F41C8E150200B66841 /* Info.plist */,
+				8CC12C711C94A3B5008BCBE5 /* Media.xcassets */,
 			);
 			path = InstaParse;
 			sourceTree = "<group>";
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				8CCD674A1C921DFA00CA08C9 /* Post.swift */,
+				8CCD674C1C922F6100CA08C9 /* InstaCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -179,7 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CA0C7F31C8E150200B66841 /* LaunchScreen.storyboard in Resources */,
-				8CA0C7F01C8E150200B66841 /* Assets.xcassets in Resources */,
+				8CC12C721C94A3B5008BCBE5 /* Media.xcassets in Resources */,
 				8CA0C7EE1C8E150200B66841 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +248,7 @@
 				8CCD674B1C921DFA00CA08C9 /* Post.swift in Sources */,
 				8CA0C7E91C8E150200B66841 /* AppDelegate.swift in Sources */,
 				8CCD67451C92166900CA08C9 /* InstaViewController.swift in Sources */,
+				8CCD674D1C922F6100CA08C9 /* InstaCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +361,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEA9856604EEFE7C8A8E2A51 /* Pods-InstaParse.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InstaParse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kwakuOwusu.InstaParse;
@@ -369,7 +372,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A0C2F2AAD2A00FA9147FCCA /* Pods-InstaParse.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InstaParse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kwakuOwusu.InstaParse;

@@ -5,5 +5,9 @@
 
 target 'InstaParse' do
 	pod 'Parse'
+	pod 'ParseUI'
+	pod 'AFNetworking'
+	pod 'MBProgressHUD'
+
 end
 

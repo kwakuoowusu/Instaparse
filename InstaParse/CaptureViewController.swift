@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class CaptureViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     @IBOutlet weak var captionField: UITextField!
     @IBOutlet weak var captureButton: UIButton!
     var editedImage: UIImage!
+    let vc = UIImagePickerController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-  
-    }
 
+        vc.delegate = self
+        vc.allowsEditing = true
+        vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+    }
+    
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -27,10 +34,7 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate,U
 
     @IBAction func onUploadTapped(sender: AnyObject) {
         
-        let vc = UIImagePickerController()
-        vc.delegate = self
-        vc.allowsEditing = true
-        vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+
         
         self.presentViewController(vc, animated: true, completion: nil)
 
@@ -68,11 +72,21 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate,U
         let caption = captionField.text
         if let editedImage = editedImage{
             if let caption = caption{
+                let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                loadingNotification.mode = MBProgressHUDMode.Indeterminate
+                loadingNotification.labelText = "Uploading to InstaParse"
+                
                 Post.postUserImage(editedImage, withCaption: caption, withCompletion: { (completed: Bool, error: NSError?) -> Void in
                     if(completed){
-                        print("success")
+                        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                        
+                        self.captionField.text = ""
+                        self.captureButton.setImage(nil, forState: .Normal)
+                        self.tabBarController?.selectedIndex = 0
                     } else{
                         print(error?.localizedDescription)
+                        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+
                     }
                 })
             }

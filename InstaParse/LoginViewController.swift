@@ -30,7 +30,6 @@ class LoginViewController: UIViewController {
         
         PFUser.logInWithUsernameInBackground(userNameField.text!,password: passwordField.text!) { (user: PFUser?, error: NSError?) -> Void in
             if(user != nil){
-                print("You're logged in")
                 self.performSegueWithIdentifier("loginSegue", sender: nil)
             }
         }
@@ -47,7 +46,6 @@ class LoginViewController: UIViewController {
         print(userNameField.text!)
         newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if(success){
-                print("Yay created a user")
                 self.performSegueWithIdentifier("loginSegue", sender: nil)
             } else{
                 print(error?.localizedDescription)
